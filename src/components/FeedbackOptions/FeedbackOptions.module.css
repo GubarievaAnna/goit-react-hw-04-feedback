@@ -1,0 +1,38 @@
+.list {
+  display: flex;
+}
+
+.item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.button {
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+.button:active {
+  transform: scale(1.2);
+}
+
+.button:not(:last-child) {
+  margin-right: 15px;
+}
+
+.accentGood {
+  composes: button;
+  background-color: green;
+}
+
+.accentNeutral {
+  composes: button;
+  background-color: grey;
+}
+
+.accentBad {
+  composes: button;
+  background-color: red;
+}
