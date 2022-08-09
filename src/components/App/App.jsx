@@ -29,14 +29,8 @@ const App = () => {
     return good + neutral + bad;
   };
 
-  const countPositiveFeedbackPercentage = () => {
-    const totalSum = countTotalFeedback();
-    const positivePercentage = Math.round((good / totalSum) * 100);
-    return positivePercentage;
-  };
-
   const total = countTotalFeedback();
-  const positivePercentage = countPositiveFeedbackPercentage();
+  const positivePercentage = Math.round((good / total) * 100);
   const options = [
     { title: 'Good', name: 'good' },
     { title: 'Neutral', name: 'neutral' },
